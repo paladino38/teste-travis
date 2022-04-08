@@ -15,8 +15,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "sudo apt-get install cppcheck; sudo apt-get install valgrind; make"
-          command: "echo Hello, World!"
+          name: "make"
+          command: "sudo apt-get install cppcheck; sudo apt-get install valgrind; make"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
