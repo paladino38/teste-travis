@@ -22,8 +22,8 @@ TEST(Foo, TestFoo1)
   // All of these should pass
  
 	
-  TEST_ASSERT_EQUAL(3, foo(vet,9,3));
-  TEST_ASSERT_EQUAL(6, foo(vet,9,6));
+  TEST_ASSERT_EQUAL(6, foo(vet,9,3));
+  TEST_ASSERT_EQUAL(3, foo(vet,9,6));
   
 }
 
