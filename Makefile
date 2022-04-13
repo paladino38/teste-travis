@@ -44,8 +44,8 @@ CFLAGS += -Wold-style-definition
 CFLAGS += -fprofile-arcs 
 CFLAGS += -ftest-coverage
 CFLAGS += -g
-CFLAGS += -errors
-CFLAGS += -fsanitize=address
+#CFLAGS += -errors dando erro
+#CFLAGS += -fsanitize=address
 
 
 TARGET_BASE1=all_tests
