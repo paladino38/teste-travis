@@ -25,7 +25,7 @@ ifeq ($(shell uname -s), Darwin)
 C_COMPILER=clang
 endif
 
-UNITY_ROOT=../Unity
+UNITY_ROOT=Unity
 
 CFLAGS=-std=c99
 CFLAGS += -Wall
@@ -43,7 +43,6 @@ CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
 CFLAGS += -fprofile-arcs 
 CFLAGS += -ftest-coverage
-CFLAGS += -Wfatal
 CFLAGS += -g
 CFLAGS += -errors
 CFLAGS += -fsanitize=address
@@ -54,14 +53,14 @@ TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
 SRC_FILES1=\
   $(UNITY_ROOT)/src/unity.c \
   $(UNITY_ROOT)/extras/fixture/src/unity_fixture.c \
-  src/foo.c \
-  test/TestFoo.c \
-  test/test_runners/TestFoo_Runner.c \
-  test/test_runners/all_tests.c
+  foo/src/foo.c \
+  foo/test/TestFoo.c \
+  foo/test/test_runners/TestFoo_Runner.c \
+  foo/test/test_runners/all_tests.c
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
-all: clean compile valgrind run
+all: clean compile run
 
 gcov : clean cppcheck compile grun    
 
