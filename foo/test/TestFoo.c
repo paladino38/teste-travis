@@ -1,8 +1,9 @@
-#include "foo.h"
+#include "../src/foo.h"
 #include "unity.h"
 #include "unity_fixture.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int vet[] = {3 ,6 ,2 ,4, 5, 32, 1, 10 , 20};
 
